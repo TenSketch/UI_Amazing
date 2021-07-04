@@ -1,0 +1,42 @@
+.backg3 {
+  @include flexCenter($cen);
+  height: 40px;
+  padding: $zero;
+}
+.nav3 {
+  width: 85%;
+  display: $flex;
+  align-items: $cen;
+  overflow: $au;
+  white-space: nowrap;
+  ul {
+    width: 100%;
+    padding: $zero;
+    margin-bottom: $zero;
+    overflow: $au;
+    white-space: $noWp;
+    li {
+      list-style: $non;
+      padding: 0px 8px;
+      font-size: 15px;
+      display: inline-block;
+      font-weight: bold;
+      // float: left;
+      color: blue;
+      cursor: pointer;
+      &:first-child {
+        border-bottom: 2px solid blue;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav3 {
+    width: 97%;
+    ul li {
+      padding: 0px 4px;
+      font-size: 11px;
+    }
+  }
+}

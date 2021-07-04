@@ -1,0 +1,64 @@
+.main {
+  background-color: #d9d7d7;
+  @include bound(100%, $au);
+  padding: 10px $zero;
+}
+
+.main1 {
+  @include bound(100%, $au);
+  display: $flex;
+  justify-content: $SB;
+  background-color: $whit;
+  padding: 4px 5px;
+}
+.main11 {
+  width: 30%;
+  background-color: $whit;
+  display: $flex;
+  align-items: $cen;
+  padding: 2px;
+  form {
+    float: left;
+    font-size: 13px;
+  }
+}
+.main12 {
+  width: 20%;
+  background-color: $whit;
+  form select {
+    width: 100%;
+  }
+}
+
+.main2 {
+  @include bound(100%, $au);
+  background-color: $whit;
+}
+.fa-circle {
+  margin-right: 0.7em;
+}
+@media only screen and (max-width: 1024px) {
+  .main11 {
+    width: 50%;
+  }
+  .main1 {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main11 {
+    width: 70%;
+    font-size: 15px;
+  }
+  .main2 {
+    width: 96%;
+  }
+}
+
+.data ul li {
+  list-style: $non;
+  i {
+    margin: $zero 5px;
+  }
+}

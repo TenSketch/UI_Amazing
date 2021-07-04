@@ -1,0 +1,70 @@
+.mainbackg {
+  @include bound(100%, 100vh);
+  position: $abs;
+  top: $zero;
+  right: $zero;
+  transition: 0.5s;
+}
+.backg {
+  @include flexCenter($cen);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: $zero;
+}
+.nav1 {
+  @include bound(85%, $height);
+  @include flexCenter($SB);
+  img {
+    @include bound($au, 100%);
+  }
+}
+
+.navicon {
+  @include bound(30%, $au);
+  ul {
+    margin-bottom: $zero;
+    padding-left: $zero;
+    @include flexCenter($SB);
+    li {
+      list-style: $non;
+      width: $au;
+      padding: 0px 5px;
+      font-size: 15px;
+      color: blue;
+      display: inline;
+      justify-content: $cen;
+      align-items: $cen;
+      i {
+        font-size: 27px;
+        margin-top: 9px;
+        padding-right: $zero;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navicon {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav1 {
+    width: 95%;
+  }
+
+  .navicon {
+    width: 10%;
+    ul li {
+      display: $non;
+      &:last-child {
+        display: $bloc;
+      }
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+}
